@@ -1,0 +1,20 @@
+>QMainWindow
+	#windowTitle = ef.qt Hello World
+	#geometry = 0, 0, 500, 500
+	* This is the centralwidget
+	>QWidget
+		>QVBoxLayout
+			>EFSpacerItem
+				#sizePolicy = QSizePolicy::Minimum, QSizePolicy::Expanding
+			>QLabel
+				#text = <h1>Hello {{name = World}}!</h1>
+				#alignment = Qt::AlignCenter
+			>EFSpacerItem
+				#size = 0, 80
+			>QLineEdit
+				#placeholderText = Enter your name!
+				* The extra '&' is the escape character for EFML
+				* Write twice to get one actual '&'
+				@textChanged:const QString&& = text_changed
+			>EFSpacerItem
+				#sizePolicy = QSizePolicy::Minimum, QSizePolicy::Expanding
