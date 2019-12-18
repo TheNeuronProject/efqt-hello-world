@@ -1,8 +1,8 @@
 >QMainWindow
 	#windowTitle = ef.qt Hello World
 	#geometry = 0, 0, 500, 500
-	* This is the centralwidget
-	>QWidget
+	#centralWidget = $refs.central
+	>QWidget#central
 		>QVBoxLayout
 			>EFSpacerItem
 				#sizePolicy = QSizePolicy::Minimum, QSizePolicy::Expanding
